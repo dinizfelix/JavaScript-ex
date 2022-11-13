@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE 1.2</title>
+    <style>
+        body{ 
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>Resultado Final</h2>
+
+    <p id="situacao">Olá</p>
+
+    <script>
+
+        let n1 = parseFloat(prompt("nota1: "));
+        let n2 = parseFloat(prompt("nota2: "));
+
+        let media = (n1 + n2) / 2;
+
+        let situacao = "";
+
+        if (media >= 6.0) {
+            situacao = "Aprovado";
+            cor = "blue";
+        } else {
+            if (media >= 2) {
+                situacao = "Exame Final";
+                cor = "orange";
+            } else {
+                situacao = "Reprovado";
+                cor = "red"
+            }
+        }
+
+        document.getElementById("situacao").innerHTML = situacao;
+        document.getElementById("situacao").style.color = cor;
+
+    </script>
+</body>
+
+</html>
